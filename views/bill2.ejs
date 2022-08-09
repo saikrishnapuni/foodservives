@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    h1{
+        text-decoration: none;
+    }
+    #fg{
+    margin-top: 100px;
+    margin-left: 600px;
+        text-align: center;
+        border: 2px solid;
+        border-width: 10px;
+        border-radius: 10px;
+        width:fit-content;
+        height:fit-content;
+        box-shadow: 3px;
+    }
+    box{
+        margin-top: 50px;
+        margin-left: 50px;
+        text-align: center;
+       
+  
+        
+    }
+    
+    table{
+        font-style: bold;
+        font-size: 100px;
+        font-size: large;
+        
+        
+        text-align: center;
+        
+    }
+.a{
+    font-style: normal;
+}
+    
+    
+</style>
+<script >
+    // function f(){
+    // var doc =document.getElementById('fg').innerHTML;
+    // var a = window.open('', '', 'height=500, width=500');
+    // a.document.write('<html>');
+    //         a.document.write('<body > <h1>Div contents are <br>');
+    //             a.document.write(doc);
+    //         a.document.write('</body></html>');
+    
+    // a.print();
+    // }
+</script>
+</head>
+<body>
+    <div id = "fg">
+    <box>
+       
+    <h1>BILL</h1>
+    <table>
+        <%var dict = [];%>
+        <%var p = [];%>
+        <tr>
+            <td>ITEM</td>
+            <td><h1></h1></td>
+            <td class="a">QUANTITY</td>
+            <td><h1>                                    </h1></td>
+            <td>PRICE</td>
+        </tr>
+        <% data.forEach(function(d){%>
+            <tr>
+                
+                <%if(sampleData[d.SNO]!=0 ){%>
+                    <%p.push(d.PRICE)%>
+                    <%dict.push({key:d.SNO,value:sampleData[d.SNO]});%>
+                <td><%=d.ITEM%></td>
+                <td><h1></h1></td>
+                <td class="a"><%=sampleData[d.SNO]%></td>
+                
+                <td><h1>                                    </h1></td>
+                <td><%=d.PRICE%></td>
+                
+                <%}%>
+                    <%});%>
+            </tr>
+        </table>
+        <%sum = 0%>
+        
+        <%for(let i=0;i<dict.length;i++){%>
+            
+            <%=console.log((p[i]*(dict[i].value)))%>
+            <%sum = sum+(p[i]*(dict[i].value))%>
+            <%};%>
+        
+
+    <h2 class="a">Your total bill is  = <%=sum%> </h1>
+        
+</box>
+
+</div>
+<button onclick="f()">click</button>
+</body>
+</html>
+

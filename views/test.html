@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin-left: 400px;
+            margin-right: 400px;
+            background-color:grey;
+            box-sizing: border-box;
+            
+            border: 3px;
+            border-color: black;
+            padding: 25px;
+            color: blue;
+        border-radius: 20px;}
+        
+        table{
+            text-align: center;
+            font-size: xx-large;
+            padding-left: 50px;
+            /* border: 3px;
+            margin-top: 50px;
+            margin-left: 200px; */
+            
+        }
+        form{
+            text-align: center;
+        }
+        .Bill {
+      margin-left: 10%;
+      margin-right: 20%;
+      height: 40px;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <table>
+        <tr>
+        <td>Item</td>
+        <td>Price</td>
+        
+        
+    </tr>
+    
+    <% sampleData.forEach(function(data){%>
+        <tr>
+        <td><%=data.ITEM%></td>
+        <td><%=data.PRICE%></td>
+        
+        </tr>
+
+    <%});%>
+
+    
+    </table>
+    <br>
+    <br>
+     <from>
+         <select name = "Bill" class ="Bill">
+            <% sampleData.forEach(function(data){%>
+             <option value=<%=data.ITEM%>><%=data.ITEM%></option>
+             <%});%>
+             <input type="text"  placeholder=" Enter amount">
+             <input type = "submit" value ="add to cart">
+         </select>
+     </from>
+</div>
+<script>
+     console.log(data);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin-left: 100px;
+        }
+        .left{
+    
+       background-repeat: no-repeat;
+       text-align: center;
+      /* margin-right:900px;
+      height: 100%;
+      width: 100%; */
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+      height: 100%;
+      width: 100%;
+      left: 0;
+  }
+  .right{
+    
+    /* height: 600px;
+    width: 400px; */
+    /* background-color:chartreuse; */
+    /* margin-left: 800px; */
+    margin-top: 0;
+    
+    padding-top: 0;
+    right: 0;
+}
+/* .bg{
+    background-image : url('/images/b.gif');
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 100px;
+    width:50%;
+    height: 100%;
+} */
+.b{
+    font: bolder;
+}
+       h1{
+            font-size:75px;
+        }
+        
+        table{
+            text-align: center;
+            font-size: xx-large;
+            padding-left: 50px;
+            /* border: 3px;
+            margin-top: 50px;
+            margin-left: 200px; */
+            
+        }
+        form{
+            text-align: center;
+        }
+        .Bill {
+      margin-left: 10%;
+      margin-right: 20%;
+      height: 40px;
+
+    }
+    body{
+        background-color: #FEBE14;
+        
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 100px;
+    width:50%;
+    height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <h1>MENU</h1>
+    <div class="row">
+        <div class="bg">
+          <div class="box">
+             <table>
+                <tr>
+                   <td class="b">SNO</td>
+                   <td class ="b">ITEM</td>
+                   <td class ="b">PRICE</td>
+                   <td></td>
+        
+        
+                </tr>
+         
+                    <% data.forEach(function(data){%>
+                              <tr>
+                                  <td><%=data.SNO%></td>
+                                  <td><%=data.ITEM%></td>
+                                  <td><%=data.PRICE%></td>
+        
+        
+         
+         
+         
+                             </tr>
+
+                       <%});%>
+
+  
+            </table>
+        </div>
+    
+        <br>
+        <br>
+     
+</div>
+</div>
+
+
+<form action = "/gg" method="post">
+    <input type="text" name = "SNO" placeholder="SNO">
+    <input type ="text" name ="ITEM" placeholder = "ITEM">
+    <input type ="text" name="PRICE" placeholder="Price">
+    <input type="hidden" name="hotelname" value=<%=x%> >
+    <input type="hidden" name="email" value=<%=email%> >
+
+    <button type="submit">add</button>
+ </form>
+
+    
+
+
+</body>
+</html>

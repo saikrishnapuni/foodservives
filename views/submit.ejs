@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    function search(){
+        let input = document.getElementsByClassName('searching').value
+        let x = document.getElementsByClassName('search');
+        for(i=0;i<x.length;i++){
+            if(!x[i].innerHTML.includes(input)){
+                x[i].style.display="none";
+            }
+            else{
+                x[i].style.display="list-item"; 
+            }
+        }
+    }
+</script>
+<style>
+    
+    /* button{
+        height: 100px;
+        width: 200px;
+        border: 3px solid;
+        font: large;
+        background-color: chartreuse;
+        
+    } */
+    .img1{
+        text-align: center;
+        height: 250px;
+        width: 250px;
+        box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+    }
+    .img1:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    }
+    .img2{
+        margin-top: 28px;
+        height: 30px;
+        width: 30px;
+    }
+    .row{
+        display: flex;
+        column-gap: 100px;
+    }
+    .box{
+
+        text-align: center;
+        height: 600px;
+        width: 400px;
+        /* background-color:chartreuse; */
+        margin-left: 800px;
+        margin-top: 0;
+        
+        padding-top: 0;
+        
+
+    }
+    .box1{
+      background-image : url('/images/background.jpg');
+     
+    }
+    .searching{
+        margin-left: 140px;
+         background-color: black;
+         color: white;
+        /* margin-left: 500px;
+            margin-right: 400px; */
+            margin-top: 20px;
+              width: 500px;
+              height: 30px;
+              /* border-radius: 5px; */
+              box-shadow: 1ch;
+    }
+  .split{
+    height: 100%;
+    width: 35%;
+    position:fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    
+  }
+  .quote{
+      
+      text-align: center;
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+      
+      font: italic;
+  }
+  .left{
+    background-image : url('/images/bh.jpg');
+       background-repeat: no-repeat;
+       text-align: center;
+      /* margin-right:900px;
+      height: 100%;
+      width: 100%; */
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+      height: 100%;
+      width: 100%;
+      left: 0;
+  }
+  .back{
+      
+      width :fit-content;
+      margin-left: 300px;
+      
+  }
+  .aa{
+    color: white;
+      margin-top: 0px;
+      font: italic;
+  }
+  .bb{
+    color: white;
+      margin-top: 0px;
+      padding-left: 1100px;
+  }
+  .cc{
+      color: white;
+      margin-top: 0px;
+      padding-left: 40px;
+  }
+  .right{
+    
+        /* height: 600px;
+        width: 400px; */
+        /* background-color:chartreuse; */
+        /* margin-left: 800px; */
+        margin-top: 0;
+        
+        padding-top: 0;
+        right: 0;
+  }
+  nav{
+      background-color: blue;
+      display: flex;
+      
+  }
+  .logo{
+    color: white;
+      font :italic;
+       font-family:sans-serif;
+       
+  }
+  .dd{
+      background-color: #4e3114;
+  }
+  
+   
+</style>
+</head>
+
+  
+      
+<body >
+    <div class="split left">
+        <table class="dd">
+        <tr >
+        <td><h1 class="aa"><i>Food Engine</i></h1></td>
+        <td><a href="/login"><h1 class = "bb"><i>  Back</i></h1></a></td>
+        <td><a href="/"><h1 class="cc"><i>Sign up</i></h1></a></td>
+        
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      
+
+    </tr>
+    </table>
+      <div class="back">
+      <h1 class="quote" >"A LOT OF RESTAURANTS SERVE GOOD FOOD ,</h1>
+      <h1 class="quote">BUT THEY DON'T HAVE VERY GOOD SERVICE"</h1>
+      <br>
+      <table>
+            <tr>
+                <td><input class="searching" type = "search" placeholder="Search" onkeyup = "search()" ></td>
+                <td><img class = 'img2'  src = 'images/icon.jpg' onclick()=" search()"></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <div class="row">
+            <a href="/hot">
+
+        <img class = "img1" src="images/h1.png">
+        <br>
+        <b class = "search">HOTEL1</b>
+    
+    </a>
+    
+        
+        
+        <a href="/hot1">
+            <img class = "img1" src="images/h2.jpg">
+            <br>
+            <b class = "search">HOTEL2</b>
+        </a> 
+        <a href="/hot2">
+            <img class="img1" src="images/6.jpg">
+            <br>
+            <b class="search">HOTEL3</b>
+        </a>
+        
+    </div>
+    </div>
+      
+     
+</div>
+    
+</div>
+</body>
+</html>

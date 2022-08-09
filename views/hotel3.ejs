@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin-left: 100px;
+        }
+        .left{
+    background-image : url('/images/h.gif');
+       background-repeat: no-repeat;
+       text-align: center;
+      /* margin-right:900px;
+      height: 100%;
+      width: 100%; */
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+      height: 100%;
+      width: 100%;
+      left: 0;
+  }
+  .right{
+    
+    /* height: 600px;
+    width: 400px; */
+    /* background-color:chartreuse; */
+    /* margin-left: 800px; */
+    margin-top: 0;
+    
+    padding-top: 0;
+    right: 0;
+}
+/* .bg{
+    background-image : url('/images/b.gif');
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 100px;
+    width:50%;
+    height: 100%;
+} */
+.b{
+    font: bolder;
+}
+       h1{
+            font-size:75px;
+        }
+        
+        table{
+            text-align: center;
+            font-size: xx-large;
+            padding-left: 50px;
+            /* border: 3px;
+            margin-top: 50px;
+            margin-left: 200px; */
+            
+        }
+        form{
+            text-align: center;
+        }
+        .Bill {
+      margin-left: 10%;
+      margin-right: 20%;
+      height: 40px;
+
+    }
+    body{
+        color: white;
+        background:  orange;
+        background-image : url('/images/dd.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    
+    
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 100px;
+    width:50%;
+    height: 100%;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="x">
+    <h1>MENU</h1>
+
+    <div class="row">
+    <div class="bg"></div>
+    <div class="box">
+    <table>
+        <tr>
+        <td class ="b"><b>ITEM</b></td>
+        <td class ="b"><b>PRICE</b></td>
+        <td class = "b"> <b>QUANTITY</b> </td>
+        <td></td>
+        
+        
+    </tr>
+</div>
+    <form action="/generatebill3" method="POST">
+    <% sampleData.forEach(function(data){%>
+        <tr>
+        <td><%=data.ITEM%></td>
+    
+        <td><%=data.PRICE%></td>
+        <!-- <td><select name = "Bill" class ="Bill">
+            <% sampleData.forEach(function(data){%>
+             <option value=<%=data.ITEM%>><%=data.ITEM%></option>
+             <%});%>
+        
+             
+         </select></td> -->
+         
+         <td><select id = "abc" name=<%=data.SNO%> id="">
+             <option value="0">0</option>
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+             <option value="9">9</option>
+
+         </select></td>
+         
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+
+    <%});%>
+
+    
+    </table>
+    <br>
+    <br>
+     <!-- <from>
+         <select name = "Bill" class ="Bill">
+            <% sampleData.forEach(function(data){%>
+             <option value=<%=data.ITEM%>><%=data.ITEM%></option>
+             <%});%>
+             
+             
+         </select>
+
+     </from>
+     <input type = "submit" value ="add to cart"> -->
+</div>
+</div>
+
+    <input type ="submit" value="generate bill"  ></form>
+
+</body>
+</html>
